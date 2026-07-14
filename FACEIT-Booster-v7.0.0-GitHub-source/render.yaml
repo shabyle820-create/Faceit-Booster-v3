@@ -2,7 +2,7 @@ services:
   - type: web
     name: faceit-booster-api
     runtime: node
-    rootDir: backend
+    rootDir: FACEIT-Booster-v7.0.0-GitHub-source/backend
     buildCommand: npm install
     startCommand: npm start
     healthCheckPath: /health
