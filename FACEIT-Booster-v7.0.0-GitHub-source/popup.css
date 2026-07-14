@@ -1,0 +1,71 @@
+
+:root{color-scheme:dark;--bg:#101116;--card:#1a1c23;--line:#2c2f38;--muted:#9da2ad;--orange:#ff5500}
+*{box-sizing:border-box}body{margin:0;width:380px;background:var(--bg);color:#f7f7f8;font:13px/1.35 Inter,Arial,sans-serif}
+main{padding:14px}header{display:flex;align-items:center;gap:11px;margin-bottom:12px}.brand{width:44px;height:44px;border-radius:13px;background:var(--orange);display:grid;place-items:center;font-weight:900;font-size:17px}h1{margin:0;font-size:18px}header p{margin:2px 0 0;color:var(--muted)}
+.card{margin:9px 0;padding:11px 12px;border:1px solid var(--line);border-radius:14px;background:var(--card)}h2{margin:0 0 8px;font-size:11px;text-transform:uppercase;letter-spacing:.09em;color:#d2d4da}
+.toggle{min-height:44px;display:flex;justify-content:space-between;align-items:center;gap:10px;border-bottom:1px solid #292c34}.toggle:last-child{border-bottom:0}.toggle span{display:flex;flex-direction:column}.toggle small,.note{color:var(--muted);font-size:11px}.toggle input{display:none}.toggle i{width:37px;height:21px;border-radius:99px;background:#3c404a;position:relative;flex:none;transition:.18s}.toggle i:after{content:"";position:absolute;width:17px;height:17px;left:2px;top:2px;border-radius:50%;background:white;transition:.18s}.toggle input:checked+i{background:var(--orange)}.toggle input:checked+i:after{transform:translateX(16px)}
+.field{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:9px}.field span{color:#d0d3da}input,select{width:190px;padding:9px;border:1px solid #393d47;border-radius:9px;background:#101116;color:#fff;outline:none}input:focus,select:focus{border-color:var(--orange)}
+.buttons{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:11px}button{border:0;border-radius:9px;padding:10px;background:var(--orange);color:#fff;font-weight:850;cursor:pointer}.secondary{background:#393d47}.note{text-align:center;margin:9px 0 0}#status{min-height:18px;text-align:center;margin-top:6px;font-size:12px}.ok{color:#72e2a1}.bad{color:#ff987a}
+.buttons.single{grid-template-columns:1fr}
+
+.fb-credit{
+  text-align:center;
+  color:#8d929d;
+  font-size:11px;
+  padding:4px 0 2px;
+  letter-spacing:.04em;
+}
+
+.brand{
+  overflow:hidden !important;
+  padding:0 !important;
+  background:#111 !important;
+}
+.brand img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+  border-radius:12px;
+}
+
+.fb-credit-card{
+  text-align:center;
+}
+.fb-credit-title{
+  color:#9da2ad;
+  font-size:11px;
+  letter-spacing:.08em;
+  margin-bottom:8px;
+}
+.fb-discord-btn{
+  width:100%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:9px;
+  border:1px solid rgba(88,101,242,.65);
+  background:linear-gradient(180deg,rgba(88,101,242,.22),rgba(88,101,242,.12));
+  color:#dfe3ff;
+  border-radius:10px;
+  padding:10px 12px;
+  font-weight:800;
+}
+.fb-discord-btn:hover{
+  background:linear-gradient(180deg,rgba(88,101,242,.32),rgba(88,101,242,.18));
+}
+.fb-discord-icon{
+  width:22px;
+  height:17px;
+  color:#fff;
+  flex:none;
+}
+.fb-discord-btn strong{
+  color:#9fa8ff;
+}
+.fb-discord-status{
+  min-height:16px;
+  margin-top:6px;
+  color:#72e2a1;
+  font-size:11px;
+}

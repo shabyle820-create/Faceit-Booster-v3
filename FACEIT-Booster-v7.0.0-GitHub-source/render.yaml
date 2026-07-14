@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: faceit-booster-api
+    runtime: node
+    rootDir: backend
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /health
+    autoDeployTrigger: commit
+    envVars:
+      - key: NODE_VERSION
+        value: 20
+      - key: FACEIT_API_KEY
+        sync: false
+      - key: CHROME_EXTENSION_IDS
+        sync: false

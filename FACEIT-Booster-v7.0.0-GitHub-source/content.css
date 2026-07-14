@@ -1,0 +1,291 @@
+
+/* FACEIT Booster v4 — inline enhancement only */
+#fb-launch{
+  position:fixed;right:18px;bottom:18px;z-index:2147483645;
+  border:0;border-radius:12px;padding:11px 15px;background:#ff5500;color:#fff;
+  font:800 13px Inter,Arial,sans-serif;box-shadow:0 12px 34px rgba(0,0,0,.45);cursor:pointer
+}
+#fb-launch.fb-working{opacity:.72;pointer-events:none}
+
+#fb-toasts{position:fixed;right:18px;bottom:70px;z-index:2147483647}
+.fb-toast{
+  width:310px;margin-top:8px;padding:12px;border:1px solid #363a44;border-radius:12px;
+  background:#171920;color:#fff;box-shadow:0 12px 35px rgba(0,0,0,.45);
+  font-family:Inter,Arial,sans-serif
+}
+.fb-toast b{display:block;margin-bottom:3px}
+.fb-toast span{font-size:11px;color:#b8bdc7}
+.fb-toast button{
+  margin-top:8px;border:0;border-radius:7px;padding:6px 9px;background:#363a44;color:#fff;cursor:pointer
+}
+
+/* Added directly inside FACEIT player cards */
+.fb-inline-player-data{
+  display:flex;align-items:center;flex-wrap:wrap;gap:5px;
+  margin:7px 8px 8px;padding-top:7px;border-top:1px solid rgba(255,255,255,.08);
+  font-family:Inter,Arial,sans-serif;font-size:10px;line-height:1.2
+}
+.fb-inline-chip{
+  display:inline-flex;align-items:center;gap:3px;
+  padding:3px 6px;border-radius:5px;
+  background:rgba(255,255,255,.07);color:#c9cdd5;white-space:nowrap
+}
+.fb-inline-chip strong{color:#fff}
+.fb-inline-form{letter-spacing:.04em}
+.fb-inline-risk{font-weight:800}
+.fb-inline-error{color:#ff9a7b}
+.fb-inline-flag{font-size:12px}
+
+/* Team average line inserted below each Players heading */
+.fb-team-summary-inline{
+  display:flex;align-items:center;justify-content:space-between;gap:8px;
+  margin:6px 0 9px;padding:7px 9px;border-radius:7px;
+  background:rgba(255,85,0,.10);border:1px solid rgba(255,85,0,.22);
+  color:#d7d9de;font:700 11px Inter,Arial,sans-serif
+}
+.fb-team-summary-inline b{color:#fff}
+.fb-team-summary-inline .fb-adv{color:#ff7a38}
+
+/* Overall estimate strip placed in the center column */
+.fb-match-estimate-inline{
+  margin:9px 0;padding:8px 10px;border-radius:7px;
+  background:rgba(255,85,0,.11);border:1px solid rgba(255,85,0,.24);
+  color:#d9dce2;text-align:center;font:700 11px Inter,Arial,sans-serif
+}
+.fb-match-estimate-inline b{color:#fff}
+
+/* Loading marker inside cards */
+.fb-inline-loading{
+  margin:7px 8px 8px;padding-top:7px;border-top:1px solid rgba(255,255,255,.08);
+  color:#8e949f;font:10px Inter,Arial,sans-serif
+}
+
+@media(max-width:900px){
+  .fb-inline-player-data{gap:4px}
+  .fb-inline-chip{padding:3px 5px}
+}
+
+
+/* Real country flag images (not emoji or country-code letters) */
+.fb-real-flag{
+  width:18px;
+  height:13px;
+  object-fit:cover;
+  border-radius:2px;
+  display:block;
+  box-shadow:0 0 0 1px rgba(255,255,255,.14);
+}
+.fb-inline-chip.fb-flag-chip{
+  padding:2px 4px;
+  min-width:26px;
+  justify-content:center;
+}
+
+
+/* Final 0–100% smurf score colors */
+.fb-smurf-low{
+  color:#67e08f;
+  border:1px solid rgba(103,224,143,.28);
+  background:rgba(103,224,143,.08);
+}
+.fb-smurf-possible{
+  color:#f5df65;
+  border:1px solid rgba(245,223,101,.28);
+  background:rgba(245,223,101,.08);
+}
+.fb-smurf-suspicious{
+  color:#ff9a43;
+  border:1px solid rgba(255,154,67,.30);
+  background:rgba(255,154,67,.09);
+}
+.fb-smurf-high{
+  color:#ff6f62;
+  border:1px solid rgba(255,111,98,.32);
+  background:rgba(255,111,98,.10);
+}
+.fb-inline-risk{
+  font-weight:900;
+}
+
+
+/* v5.1 layout refinement */
+.fb-team-summary-inline{
+  margin:0 0 10px !important;
+  padding:9px 11px !important;
+  border:1px solid rgba(255,45,45,.65) !important;
+  background:rgba(255,20,20,.10) !important;
+  color:#ff4a4a !important;
+  font-family:Inter,Arial,sans-serif !important;
+  font-weight:900 !important;
+  font-size:12px !important;
+}
+.fb-team-summary-inline b{
+  color:#ff4a4a !important;
+  font-size:13px !important;
+}
+.fb-match-estimate-inline{
+  border:1px solid #ff2d2d !important;
+  background:rgba(255,20,20,.14) !important;
+  color:#ff4040 !important;
+  font-family:Inter,Arial,sans-serif !important;
+  font-weight:900 !important;
+  font-size:12px !important;
+  text-shadow:0 0 8px rgba(255,0,0,.18);
+}
+.fb-match-estimate-inline b{
+  color:#ff2d2d !important;
+}
+.fb-inline-player-data{
+  font-family:Arial,Helvetica,sans-serif !important;
+  font-size:11px !important;
+  font-weight:600 !important;
+  letter-spacing:.01em;
+}
+.fb-inline-chip{
+  font-family:Arial,Helvetica,sans-serif !important;
+  font-size:11px !important;
+  font-weight:700 !important;
+}
+.fb-inline-player-data .fb-inline-chip strong{
+  font-size:11px !important;
+}
+[data-fb-enhanced="1"]{
+  overflow:visible !important;
+}
+[data-fb-enhanced="1"] .fb-inline-player-data{
+  width:auto !important;
+  max-width:100% !important;
+}
+.fb-name-fix{
+  min-width:0 !important;
+  overflow:visible !important;
+  white-space:nowrap !important;
+  text-overflow:clip !important;
+}
+
+
+/* v6 final team headers and Elo colors */
+.fb-team-summary-inline{
+  width:100% !important;
+  box-sizing:border-box !important;
+  margin:0 0 10px !important;
+  padding:10px 12px !important;
+  border:1px solid rgba(255,70,70,.72) !important;
+  border-radius:8px !important;
+  background:#17191f !important;
+  color:#ff5b5b !important;
+  box-shadow:0 0 0 1px rgba(255,30,30,.06) inset !important;
+  font-family:Arial,Helvetica,sans-serif !important;
+  font-size:12px !important;
+  font-weight:900 !important;
+}
+.fb-team-summary-inline span:first-child{
+  color:#ff5b5b !important;
+}
+.fb-team-summary-inline span:last-child{
+  color:#f4f5f7 !important;
+}
+.fb-team-summary-inline b{
+  color:#ffffff !important;
+}
+
+/* Estimated Elo strip */
+.fb-match-estimate-inline{
+  background:#17191f !important;
+  border:1px solid rgba(255,70,70,.70) !important;
+  color:#f3f4f6 !important;
+  border-radius:8px !important;
+  font-family:Arial,Helvetica,sans-serif !important;
+  font-size:12px !important;
+  font-weight:800 !important;
+  line-height:1.45 !important;
+}
+.fb-match-estimate-inline .fb-estimate-team{
+  color:#ff5b5b !important;
+  font-weight:900 !important;
+}
+.fb-match-estimate-inline .fb-elo-win{
+  color:#55e681 !important;
+  font-weight:900 !important;
+  text-shadow:0 0 7px rgba(85,230,129,.16);
+}
+.fb-match-estimate-inline .fb-elo-loss{
+  color:#ff5f5f !important;
+  font-weight:900 !important;
+  text-shadow:0 0 7px rgba(255,95,95,.16);
+}
+
+/* Player stat readability */
+.fb-inline-player-data{
+  font-family:"Segoe UI",Arial,Helvetica,sans-serif !important;
+  font-size:11px !important;
+  font-weight:650 !important;
+  line-height:1.25 !important;
+}
+.fb-inline-chip{
+  font-family:"Segoe UI",Arial,Helvetica,sans-serif !important;
+  font-size:11px !important;
+  font-weight:700 !important;
+  background:#24272e !important;
+  color:#e8eaee !important;
+}
+.fb-inline-form{
+  color:#c7ccd5 !important;
+}
+
+
+/* v6.1 — restore Smurf badge colors with stronger specificity */
+.fb-inline-chip.fb-smurf-low{
+  color:#67e08f !important;
+  border:1px solid rgba(103,224,143,.35) !important;
+  background:rgba(103,224,143,.10) !important;
+}
+.fb-inline-chip.fb-smurf-possible{
+  color:#f5df65 !important;
+  border:1px solid rgba(245,223,101,.36) !important;
+  background:rgba(245,223,101,.10) !important;
+}
+.fb-inline-chip.fb-smurf-suspicious{
+  color:#ff9a43 !important;
+  border:1px solid rgba(255,154,67,.38) !important;
+  background:rgba(255,154,67,.11) !important;
+}
+.fb-inline-chip.fb-smurf-high{
+  color:#ff6f62 !important;
+  border:1px solid rgba(255,111,98,.40) !important;
+  background:rgba(255,111,98,.12) !important;
+}
+
+/* Team leader highlight */
+.fb-own-leader{
+  color:#52e681 !important;
+  font-weight:900 !important;
+  text-shadow:0 0 8px rgba(82,230,129,.20) !important;
+}
+.fb-opponent-leader{
+  color:#ff5f5f !important;
+  font-weight:900 !important;
+  text-shadow:0 0 8px rgba(255,95,95,.20) !important;
+}
+
+
+/* Final team colors */
+.fb-team-summary-inline.fb-own-team-bar{
+  border-color:#39d96f !important;
+  background:rgba(57,217,111,.10) !important;
+  box-shadow:0 0 0 1px rgba(57,217,111,.07) inset !important;
+}
+.fb-team-summary-inline.fb-own-team-bar span:first-child,
+.fb-team-summary-inline.fb-own-team-bar b{
+  color:#53e681 !important;
+}
+.fb-team-summary-inline.fb-opponent-team-bar{
+  border-color:#ff4f4f !important;
+  background:rgba(255,79,79,.10) !important;
+  box-shadow:0 0 0 1px rgba(255,79,79,.07) inset !important;
+}
+.fb-team-summary-inline.fb-opponent-team-bar span:first-child,
+.fb-team-summary-inline.fb-opponent-team-bar b{
+  color:#ff5f5f !important;
+}
+.fb-inline-form{display:none !important;}
